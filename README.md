@@ -109,5 +109,5 @@ ol {
 ```
 
 ### Working Examples:
-[Click here](https://jsfiddle.net/HiDe_Techno_Tips/rka0wpoq/) to view example on how to list all Repositories of a GitHub User in a HTML webpage.
-[Click here](https://github.com/HiDe-Techno-Tips/HiDe-Techno-Tips.github.io) to view the source code of my website that uses this Script.
+* [Click here](https://jsfiddle.net/HiDe_Techno_Tips/rka0wpoq/) to view example on how to list all Repositories of a GitHub User in a HTML webpage.
+* [Click here](https://github.com/HiDe-Techno-Tips/HiDe-Techno-Tips.github.io) to view the source code of [my website](HiDe-Techno-Tips.github.io) that uses this Script.
