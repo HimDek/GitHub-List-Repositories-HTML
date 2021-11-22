@@ -1,4 +1,5 @@
 function listrepos(username, listelement) {
+	return new Promise((resolve, reject) => {
 	reposurl = "https://api.github.com/users/" + username + "/repos"
 	count = 0;
 	fetch(reposurl).then(res => res.json()).then((out) => {
@@ -22,8 +23,9 @@ function listrepos(username, listelement) {
 		listelement.appendChild(ol);
 		var $wrapper = $('.sort');
 		$wrapper.find('li').sort(function(a, b) { return +a.getAttribute('data-position') - +b.getAttribute('data-position'); }).appendTo($wrapper);
-		return count;
-	})
+		resolve(count);
+	});
+	});
 }
 
 function listgists(username, listelement) {
