@@ -1,3 +1,51 @@
+function int listrepos(username, listelement) {
+	reposurl = "https://api.github.com/users/" + username + "/repos"
+	count = 0;
+	fetch(reposurl).then(res => res.json()).then((out) => {
+		var ol = document.createElement("ol");
+		ol.setAttribute("class", "sort");
+	
+		divtxt = "";
+		for (let i = 0; ; i++) {
+			if (out[i] == null) {
+				break;
+			}
+			if (out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() || out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() + ".github.io") {
+				continue;
+			}
+			count++;
+			node = document.createElement("li");
+			node.setAttribute("data-position", 0 - out[i].watchers);
+        		gitpin(out[i].url, "repo", node);
+			ol.appendChild(node);
+		}
+		listelement.appendChild(ol);
+		var $wrapper = $('.sort');
+		$wrapper.find('li').sort(function(a, b) { return +a.getAttribute('data-position') - +b.getAttribute('data-position'); }).appendTo($wrapper);
+	})
+	return count;
+}
+
+function int listgists(username, listelement) {
+	count = 0;
+	gistsurl = "https://api.github.com/users/" + username + "/gists"
+	fetch(gistsurl).then(res => res.json()).then((out) => {
+		var ol = document.createElement("ol");
+		divtxt = "";
+		for (let i = 0; ; i++) {
+			if (out[i] == null || Object.keys(out[i].files)[0] == null) {
+				break;
+			}
+			count++;
+			node = document.createElement("li");
+			gitpin(out[i].url, "gist", node);
+			ol.appendChild(node);
+		}
+		listelement.appendChild(ol);
+	})
+	return count;
+}
+
 function gitpin(apiurl, type, element) {
 	fetch(apiurl).then(res => res.json()).then((out) => {
     	url = out.html_url;
