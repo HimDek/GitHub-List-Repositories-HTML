@@ -1,6 +1,6 @@
 function listrepos(username, listelement) {
 	return new Promise((resolve, reject) => {
-		count = 0;
+		reposcount = 0;
 		reposurl = "https://api.github.com/users/" + username + "/repos"
 		fetch(reposurl).then(res => res.json()).then((out) => {
 			var ol = document.createElement("ol");
@@ -14,7 +14,7 @@ function listrepos(username, listelement) {
 				if (out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() || out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() + ".github.io") {
 					continue;
 				}
-				count++;
+				reposcount++;
 				node = document.createElement("li");
 				node.setAttribute("data-position", 0 - out[i].watchers);
         			gitpin(out[i].url, "repo", node);
@@ -23,14 +23,14 @@ function listrepos(username, listelement) {
 			listelement.appendChild(ol);
 			var $wrapper = $('.sort');
 			$wrapper.find('li').sort(function(a, b) { return +a.getAttribute('data-position') - +b.getAttribute('data-position'); }).appendTo($wrapper);
-			resolve(count);
+			resolve(reposcount);
 		});
 	});
 }
 
 function listgists(username, listelement) {
 	return new Promise((resolve, reject) => {
-		count = 0;
+		gistscount = 0;
 		gistsurl = "https://api.github.com/users/" + username + "/gists"
 		fetch(gistsurl).then(res => res.json()).then((out) => {
 			var ol = document.createElement("ol");
@@ -39,13 +39,13 @@ function listgists(username, listelement) {
 				if (out[i] == null || Object.keys(out[i].files)[0] == null) {
 					break;
 				}
-				count++;
+				gistscount++;
 				node = document.createElement("li");
 				gitpin(out[i].url, "gist", node);
 				ol.appendChild(node);
 			}
 			listelement.appendChild(ol);
-			resolve(count);
+			resolve(gistscount);
 		});
 	});
 }
