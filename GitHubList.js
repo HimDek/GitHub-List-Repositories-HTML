@@ -22,8 +22,8 @@ function listrepos(username, listelement) {
 		listelement.appendChild(ol);
 		var $wrapper = $('.sort');
 		$wrapper.find('li').sort(function(a, b) { return +a.getAttribute('data-position') - +b.getAttribute('data-position'); }).appendTo($wrapper);
+		return count;
 	})
-	return count;
 }
 
 function listgists(username, listelement) {
@@ -42,8 +42,8 @@ function listgists(username, listelement) {
 			ol.appendChild(node);
 		}
 		listelement.appendChild(ol);
+		return count;
 	})
-	return count;
 }
 
 function gitpin(apiurl, type, element) {
