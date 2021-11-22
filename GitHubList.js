@@ -1,4 +1,4 @@
-function int listrepos(username, listelement) {
+function listrepos(username, listelement) {
 	reposurl = "https://api.github.com/users/" + username + "/repos"
 	count = 0;
 	fetch(reposurl).then(res => res.json()).then((out) => {
@@ -26,7 +26,7 @@ function int listrepos(username, listelement) {
 	return count;
 }
 
-function int listgists(username, listelement) {
+function listgists(username, listelement) {
 	count = 0;
 	gistsurl = "https://api.github.com/users/" + username + "/gists"
 	fetch(gistsurl).then(res => res.json()).then((out) => {
