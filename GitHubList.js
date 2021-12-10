@@ -64,6 +64,7 @@ function gitpin(apiurl, type, element) {
         	newdiv.setAttribute("class", "box");
 		buttons = "<a href=\"" + url + "\"><button>View in Github</button></a>";
 
+		site = false;
 		if (out.has_pages){
 			url = "https://" + out.owner.login + ".github.io/" + out.name;
 			site = true;
