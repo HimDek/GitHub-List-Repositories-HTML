@@ -52,7 +52,7 @@ listgists("Username", document.getElementById("IdOfTheHTMLElement")).then(gistsc
 ```
 
 ### Basic CSS to be used:
-Put the following lines inside the <head></head> of you HTML file. These are the basic CSS styles. You can customize them to match the theme of your website.
+Put the following lines inside the `<head></head>` of you HTML file. These very basic CSS styles. You can customize them to match the theme of your website.
 ```
 <style>
 svg {
