@@ -1,7 +1,7 @@
 # GitHub-List-Repositories
 List or pin the GitHub Repositories or Gists in a webpage using GitHub API.
 
-### First, put these lines inside <head></head> of your HTML file:
+### First, put these lines inside the `<head></head>` of your HTML file:
 ```
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://gitlist.himdek.com/GitHubList.js"></script>
