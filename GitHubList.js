@@ -2,7 +2,7 @@ function listrepos(username, listelement) {
 	return new Promise((resolve, reject) => {
 		reposcount = 0;
 		reposurl = "https://api.github.com/users/" + username + "/repos"
-		fetch(reposurl).then(res => res.json()).then((out) => {
+		fetch(reposurl).then(res => res.json()).then(async (out) => {
 			var ol = document.createElement("ol");
 			ol.setAttribute("class", "sort");
 	
@@ -17,7 +17,7 @@ function listrepos(username, listelement) {
 				reposcount++;
 				node = document.createElement("li");
 				node.setAttribute("data-position", 0 - out[i].watchers);
-        			gitpin(out[i].url, "repo", node);
+        			await gitpin(out[i].url, "repo", node);
 				ol.appendChild(node);
 			}
 			listelement.appendChild(ol);
@@ -32,7 +32,7 @@ function listgists(username, listelement) {
 	return new Promise((resolve, reject) => {
 		gistscount = 0;
 		gistsurl = "https://api.github.com/users/" + username + "/gists"
-		fetch(gistsurl).then(res => res.json()).then((out) => {
+		fetch(gistsurl).then(res => res.json()).then(async (out) => {
 			var ol = document.createElement("ol");
 			divtxt = "";
 			for (let i = 0; ; i++) {
@@ -41,7 +41,7 @@ function listgists(username, listelement) {
 				}
 				gistscount++;
 				node = document.createElement("li");
-				gitpin(out[i].url, "gist", node);
+				await gitpin(out[i].url, "gist", node);
 				ol.appendChild(node);
 			}
 			listelement.appendChild(ol);
