@@ -16,7 +16,7 @@ function listrepos(username, listelement) {
 				}
 				reposcount++;
 				node = document.createElement("li");
-				node.setAttribute("data-pos</a>ition", 0 - out[i].watchers);
+				node.setAttribute("data-position", 0 - out[i].watchers);
         			gitpin(out[i].url, "repo", node);
 				ol.appendChild(node);
 			}
