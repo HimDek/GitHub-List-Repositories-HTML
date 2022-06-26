@@ -50,8 +50,8 @@ function listgists(username, listelement) {
 	});
 }
 
-async function gitpin(apiurl, type, element) {
-	fetch(apiurl).then(res => res.json()).then((out) => {
+function gitpin(apiurl, type, element) {
+	fetch(apiurl).then(res => res.json()).then(async (out) => {
     	url = out.html_url;
 		newdiv = document.createElement("div");
         
