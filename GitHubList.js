@@ -50,7 +50,7 @@ function listgists(username, listelement) {
 	});
 }
 
-function gitpin(apiurl, type, element) {
+async function gitpin(apiurl, type, element) {
 	fetch(apiurl).then(res => res.json()).then((out) => {
     	url = out.html_url;
 		newdiv = document.createElement("div");
@@ -83,7 +83,7 @@ function gitpin(apiurl, type, element) {
 		
 		language = "";
 		if (out.language != null) {
-			fetch("https://raw.githubusercontent.com/ozh/github-colors/master/colors.json").then(res => res.json()).then((col) => {
+			await fetch("https://raw.githubusercontent.com/ozh/github-colors/master/colors.json").then(res => res.json()).then((col) => {
 				for(const x in col)
  					if (x == out.language)
 						language = "<span>" + "<svg style=\"padding: 0px; margin:0;\" height=\"16\" width=\"14\"><circle cx=\"6\" cy=\"6\" r=\"6\" stroke=\"white\" stroke-width=\"1\" fill=\"" + col[x].color + "\"></circle></svg>" + out.language + "</span>";
