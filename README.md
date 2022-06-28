@@ -6,7 +6,7 @@
 <p class="buttons" align="center">
  <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/HimDek/GitHub-List-Repositories-HTML?style=flat-square"></a>
  <a href="https://github.com/HimDek/GitHub-List-Repositories-HTMLe/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/himdek/GitHub-List-Repositories-HTML?style=flat-square"></a>
- <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/blob/master/LICENSE.md"><img alt="GitHub license" src="https://img.shields.io/github/license/HimDek/GitHub-List-Repositories-HTML?style=flat-square"></a>
+ <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/blob/main/LICENSE.md"><img alt="GitHub license" src="https://img.shields.io/github/license/HimDek/GitHub-List-Repositories-HTML?style=flat-square"></a>
  <a href="https://gitlist.himdek.com/"><img class="invisible" src="https://img.shields.io/badge/gitlist.himdek.com-View%20Website-blue?style=flat-square&logo=Internet-Explorer&color=blue" /></a>
  <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/"><img src="https://img.shields.io/badge/GitHub-View%20sourcecode-blue?style=flat-square&logo=github&color=blueviolet" /></a>
  <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/HimDek/GitHub-List-Repositories-HTML?style=flat-square"></a>
