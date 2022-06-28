@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
 <title>GitList | List all GitHub Repos in HTML</title>
-<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="stylesheet" type="text/css" href="https://himdek.github.io/style.css">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -12,7 +12,7 @@
 <div id = "header"></div><br />
 </header>
 <script>
-fetch("himdek.github.io/header.txt").then(function(response) {
+fetch("https://himdek.github.io/header.txt").then(function(response) {
     	response.text().then(function(text) {
     		document.getElementById("header").innerHTML = text;
     	});
@@ -21,7 +21,7 @@ fetch("himdek.github.io/header.txt").then(function(response) {
 
 <div id = "tabbar" class = "tab" style = "z-index:1"></div>
 <script>
-fetch("himdek.github.io/tab.txt").then(function(response) {
+fetch("https://himdek.github.io/tab.txt").then(function(response) {
     	response.text().then(function(text) {
     		document.getElementById("tabbar").innerHTML = text;
     	});
@@ -82,7 +82,7 @@ fetch("README.md").then(function(response) {
 <div id = "footer"></div>
 </footer>
 <script>
-fetch("himdek.github.io/footer.txt").then(function(response) {
+fetch("https://himdek.github.io/footer.txt").then(function(response) {
     	response.text().then(function(text) {
     		document.getElementById("footer").innerHTML = text;
     	});
