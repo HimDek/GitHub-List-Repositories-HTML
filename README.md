@@ -6,9 +6,9 @@
 <p class="buttons" align="center">
  <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/HimDek/GitHub-List-Repositories-HTML?style=flat-square&label=Issues" /></a>
  <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/himdek/GitHub-List-Repositories-HTML?style=flat-square&label=Pull%20requests" /></a>
- <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/workflows/pages/pages-build-deployment/"><img src="https://img.shields.io/github/deployments/HimDek/GitHub-List-Repositories-HTML/github-pages?label=Build%20WebPage&logo=InternetExplorer&style=flat-square" /></a>
- <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/HimDek/GitHub-List-Repositories-HTML?style=flat-square&label=License" /></a>
  <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/"><img src="https://img.shields.io/badge/GitHub-View%20sourcecode-blue?style=flat-square&logo=github&color=blueviolet" /></a>
+ <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/HimDek/GitHub-List-Repositories-HTML?style=flat-square&label=License" /></a>
+ <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/workflows/pages/pages-build-deployment/"><img src="https://img.shields.io/github/deployments/HimDek/GitHub-List-Repositories-HTML/github-pages?label=WebPage%20build%20status&logo=InternetExplorer&style=flat-square" /></a>
  <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/HimDek/GitHub-List-Repositories-HTML?style=flat-square&label=Forks" /></a>
  <a href="https://github.com/HimDek/GitHub-List-Repositories-HTML/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/HimDek/GitHub-List-Repositories-HTML?style=flat-square&label=Stars" /></a>
 </p>
