@@ -95,37 +95,49 @@ function gitpin(apiurl, type, element) {
     }
 
     if (type == "gist") {
-    	files = 0;
+      files = 0;
     	for (let i = 0; ; i++) {
       	if (Object.keys(out.files)[i] == null)
         	break;
         files++;
       }
-      if (files == 1)
-      	files = files + " file";
-      else
-      	files = files + " files";
-      files = "<span><a href=\"" + out.html_url + "/forks\"><svg aria-hidden=\"true\" height=\"19\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" data-view-component=\"true\" class=\"octicon octicon-code-square\"><path fill-rule=\"evenodd\" d=\"M1.75 1.5a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm9.22 3.72a.75.75 0 000 1.06L10.69 8 9.22 9.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM6.78 6.53a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 101.06-1.06L5.31 8l1.47-1.47z\"></path></svg>" + files + "</a></span>";
-      
+      if (files == 0)
+        files = "";
+      else { 
+        if (files == 1)
+      	  files = files + " file";
+        else
+      	  files = files + " files";
+        files = "<span><a href=\"" + out.html_url + "/forks\"><svg aria-hidden=\"true\" height=\"19\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" data-view-component=\"true\" class=\"octicon octicon-code-square\"><path fill-rule=\"evenodd\" d=\"M1.75 1.5a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm9.22 3.72a.75.75 0 000 1.06L10.69 8 9.22 9.47a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM6.78 6.53a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 101.06-1.06L5.31 8l1.47-1.47z\"></path></svg>" + files + "</a></span>";
+      }
+
       forks = 0;
     	for (let i = 0; ; i++) {
       	if (Object.keys(out.forks)[i] == null)
         	break;
         forks++;
       }
-      if (forks == 1)
-      	forks = forks + " fork";
-      else
-      	forks = forks + " forks";
-      forks = "<span><a href=\"" + out.html_url + "/forks\"><svg aria-hidden=\"true\" height=\"19\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" data-view-component=\"true\"><path fill-rule=\"evenodd\" d=\"M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z\"></path></svg>" + forks + "</a></span>";
-      
-      if (out.comments == 1)
-      	comments = out.comments + " comment";
-      else
-      	comments = out.comments + " comments";
-      comments = "<span><a href=\"" + out.html_url + "#comments\"><svg aria-hidden=\"true\" height=\"19\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" data-view-component=\"true\" class=\"octicon octicon-comment\"><path fill-rule=\"evenodd\" d=\"M2.75 2.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H2.75zM1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0113.25 12H9.06l-2.573 2.573A1.457 1.457 0 014 13.543V12H2.75A1.75 1.75 0 011 10.25v-7.5z\"></path></svg>0 comments</a></span>"
+      if (forks == 0)
+        forks = "";
+      else {
+        if (forks == 1)
+      	  forks = forks + " fork";
+        else
+      	  forks = forks + " forks";
+        forks = "<span><a href=\"" + out.html_url + "/forks\"><svg aria-hidden=\"true\" height=\"19\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" data-view-component=\"true\"><path fill-rule=\"evenodd\" d=\"M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z\"></path></svg>" + forks + "</a></span>";
+      }
 
-			stats = "<span class=\"stats\">" + files + forks + comments + "</span>";
+      if (out.comments == 0)
+        comments = ""
+      else {
+        if (out.comments == 1)
+      	  comments = out.comments + " comment";
+        else
+      	  comments = out.comments + " comments";
+        comments = "<span><a href=\"" + out.html_url + "#comments\"><svg aria-hidden=\"true\" height=\"19\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" data-view-component=\"true\" class=\"octicon octicon-comment\"><path fill-rule=\"evenodd\" d=\"M2.75 2.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H2.75zM1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0113.25 12H9.06l-2.573 2.573A1.457 1.457 0 014 13.543V12H2.75A1.75 1.75 0 011 10.25v-7.5z\"></path></svg>0 comments</a></span>"
+      }
+
+      stats = "<span class=\"stats\">" + files + forks + comments + "</span>";
 
       divtxt = "<div class = \"box\"><div><a href = \"" + url + "\"><h2>" + Object.keys(out.files)[0] + "</h2></a><p>" + desc + "</p>" + stats + "</div>";
     }
