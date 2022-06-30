@@ -84,48 +84,26 @@ Put the following lines inside the `<head></head>` of you HTML file. These very 
 ```
 <style>
 svg {
-  display: inline-block;
   vertical-align: middle;
-  padding-bottom: 3px;
 }
 
 a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .box {
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 25px;
   margin: 20px;
 }
 
-.box div {
-  margin: 5px;
-}
-
-.box p {
-  color: black;
-}
-
-.controls {
-  display: flex;
-}
-
-.horizontalspace {
-  flex-grow: 1;
-}
-
-.stats {
-  display: inline-flex;
-  align-items: center;
-}
-
-.buttons * {
-  margin-left: 5px;
-}
-
-.stats *:not(svg) {
-  margin-right: 5px;
+.stats span {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 ol {
