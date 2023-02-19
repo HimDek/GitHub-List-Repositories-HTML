@@ -62,14 +62,14 @@ function gitpin(apiurl, type, element) {
   fetch(apiurl).then(res => res.json()).then((out) => {
     url = out.html_url;
     newdiv = document.createElement("div");
-
+    newdiv.setAttribute("class", "box");
+    
     desc = "";
     if (out.description != null) {
       desc = out.description;
     }
 
     if (type == "repo") {
-      newdiv.setAttribute("class", "box");
 
       if (out.has_pages)
         url = "https://" + out.owner.login + ".github.io/" + out.name;
@@ -145,10 +145,8 @@ function gitpin(apiurl, type, element) {
 
       stats = "<span class=\"stats\">" + files + forks + comments + "</span>";
 
-      divtxt = "<div class = \"box\"><div><a href = \"" + url + "\"><h2>" + Object.keys(out.files)[0] + "</h2></a><p>" + desc + "</p>" + stats + "</div>";
+      divtxt = "<a href = \"" + url + "\"><h2>" + Object.keys(out.files)[0] + "</h2></a><p>" + desc + "</p>" + stats;
     }
-
-    newdiv.setAttribute("style", "text-align: left;");
     newdiv.innerHTML = divtxt;
     element.appendChild(newdiv);
   });
