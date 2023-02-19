@@ -1,4 +1,4 @@
-function listrepos(username, listelement) {
+function listrepos(username, listelement, showProfile=false, showPagesHome=false, exclude=[]) {
   return new Promise((resolve, reject) => {
     reposcount = 0;
     reposurl = "https://api.github.com/users/" + username + "/repos"
@@ -11,7 +11,13 @@ function listrepos(username, listelement) {
         if (out[i] == null) {
           break;
         }
-        if (out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() || out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() + ".github.io") {
+        if (!showProfile && out[i].name.toLowerCase() == out[i].owner.login.toLowerCase()) {
+          continue;
+        }
+        if (!showPagesHome && out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() + ".github.io") {
+          continue;
+        }
+        if (exclude.includes(out[i].name)) {
           continue;
         }
         reposcount++;
