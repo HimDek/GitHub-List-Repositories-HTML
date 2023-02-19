@@ -48,7 +48,7 @@
 > * `type`: "repo" or "gist"
 > * `HTMLDOMElement`: The HTML DOM Element to insert into. Example: `document.getElementById("myID")`. To set Id of HTML Element: `<div id="myID"></div>`
 >
-> #### Example
+> #### Example:
 > ``` Js
 > gitpin("https://api.github.com/repos/Username/Reponame", "repo", document.getElementById("IdOfTheHTMLElement"));
 > ```
@@ -67,7 +67,7 @@
 > * `showPagesHome`: default=`false` set to `true` to show the User's GitHub pages Home page repo i.e. "Username/Username.github.io"
 > * `exclude`: default=`[]`, To exclude a repo, put a "," separated list of repo names to be excluded enclosed in `""` inside the `[]`. Example: `["reponame-1", "reponame-2"]`
 > 
-> #### Example
+> #### Example:
 > * Pin all the repos of a User except the profile and pages Home repo:
 >   ``` Js
 >   listrepos("Username", document.getElementById("IdOfTheHTMLElement")).then(reposcount => {
@@ -98,7 +98,7 @@
 > * `Username`: GitHub username. Example: `"HimDek"` is my username.
 > * `HTMLDOMElement`: The HTML DOM Element to insert into. Example: `document.getElementById("myID")`. To set Id of HTML Element: `<div id="myID"></div>`
 > 
-> #### Example
+> #### Example:
 >   ``` Js
 >   listgists("Username", document.getElementById("IdOfTheHTMLElement")).then(gistscount => {
 >     // In this section, variable gistscount stores the total number of Gists.
@@ -191,33 +191,32 @@ ol {
 ## Generated HTML Structure
 
 * Repo pin box:
-``` HTML
-<div class="box" style="text-align: left;">
- <a href="{repo url}"><svg></svg>{repo name}</a>
+  ``` HTML
+  <div class="box" style="text-align: left;">
+   <a href="{repo url}"><svg></svg>{repo name}</a>
  
- <p>{description}</p>
+   <p>{description}</p>
  
- <span class="stats">
-  <span><svg></svg>{Language name}</span>
-  <span><a href="{stars url}"><svg></svg>{number of stars}</a></span>
-  <span><a href="{forks url}"><svg></svg>{number of forks}</a></span>
-  <span><svg></svg>{license name}</span>
- </span>
-</div>
-```
+   <span class="stats">
+    <span><svg></svg>{Language name}</span>
+    <span><a href="{stars url}"><svg></svg>{number of stars}</a></span>
+    <span><a href="{forks url}"><svg></svg>{number of forks}</a></span>
+    <span><svg></svg>{license name}</span>
+   </span>
+  </div>
+  ```
 
 * Gist pin box: 
+  ``` HTML
+  <div class="box">
+   <a href="{gist url}"><h2>{gist name}</h2></a>
 
-``` HTML
-<div class="box">
- <a href="{gist url}"><h2>{gist name}</h2></a>
+   <p>Description</p>
 
- <p>Description</p>
-
- <span class="stats">
-  <span><a href="{gist url}"><svg></svg>{number of files} file</a></span>
-  <span><a href="{forks url}"><svg></svg>{number of forks} forks</a></span>
-  <span><a href="{comments url}"><svg></svg>{number of comments} comments</a></span>
- </span>
-</div>
-```
+   <span class="stats">
+    <span><a href="{gist url}"><svg></svg>{number of files} file</a></span>
+    <span><a href="{forks url}"><svg></svg>{number of forks} forks</a></span>
+    <span><a href="{comments url}"><svg></svg>{number of comments} comments</a></span>
+   </span>
+  </div>
+  ```
