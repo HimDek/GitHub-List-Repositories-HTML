@@ -5,8 +5,6 @@ function listrepos(username, listelement, showProfile=false, showPagesHome=false
     fetch(reposurl).then(res => res.json()).then((out) => {
       var ol = document.createElement("ol");
       ol.setAttribute("class", "sort");
-
-      divtxt = "";
       for (let i = 0;; i++) {
         if (out[i] == null) {
           break;
@@ -42,7 +40,6 @@ function listgists(username, listelement) {
     gistsurl = "https://api.github.com/users/" + username + "/gists"
     fetch(gistsurl).then(res => res.json()).then((out) => {
       var ol = document.createElement("ol");
-      divtxt = "";
       for (let i = 0;; i++) {
         if (out[i] == null || Object.keys(out[i].files)[0] == null) {
           break;
@@ -212,6 +209,10 @@ function gitpin(apiurl, type, element) {
     
     card.classList.add("box");  // Legacy support
     card.classList.add("card");
+    
+    cardtitle.classList.add("card-title");
+    cardcontent.classList.add("card-content");
+    cardfooter.classList.add("card-footer");
     
     titlea.setAttribute("href", url);
     
