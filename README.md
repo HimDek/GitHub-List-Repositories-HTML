@@ -192,31 +192,43 @@ ol {
 
 * Repo pin box:
   ``` HTML
-  <div class="box" style="text-align: left;">
-   <a href="{repo url}"><svg></svg>{repo name}</a>
+  <div class="repo card">
+   <div class="card-title">
+    <a href="{repo url}"><h4><svg></svg>{repo name}</h4></a>
+   </div>
  
-   <p>{description}</p>
+   <div class="card-content">
+    <p>{description}</p>
+   </div>
  
-   <span class="stats">
-    <span><svg></svg>{Language name}</span>
-    <span><a href="{stars url}"><svg></svg>{number of stars}</a></span>
-    <span><a href="{forks url}"><svg></svg>{number of forks}</a></span>
-    <span><svg></svg>{license name}</span>
-   </span>
+   <div class="card-footer">
+    <span class="stats">
+     <span><svg></svg>{Language name}</span>
+     <span><a href="{stars url}"><svg></svg>{number of stars}</a></span>
+     <span><a href="{forks url}"><svg></svg>{number of forks}</a></span>
+     <span><svg></svg>{license name}</span>
+    </span>
+   </div>
   </div>
   ```
 
 * Gist pin box: 
   ``` HTML
-  <div class="box">
-   <a href="{gist url}"><h2>{gist name}</h2></a>
-
-   <p>Description</p>
-
-   <span class="stats">
-    <span><a href="{gist url}"><svg></svg>{number of files} file</a></span>
-    <span><a href="{forks url}"><svg></svg>{number of forks} forks</a></span>
-    <span><a href="{comments url}"><svg></svg>{number of comments} comments</a></span>
-   </span>
+  <div class="gist card">
+   <div class="card-title">
+    <a href="{gist url}"><h2>{gist name}</h2></a>
+   </div>
+   
+   <div class="card-content">
+    <p>Description</p>
+   </div>
+   
+   <div class="card-footer">
+    <span class="stats">
+     <span><a href="{gist url}"><svg></svg>{number of files} file</a></span>
+     <span><a href="{forks url}"><svg></svg>{number of forks} forks</a></span>
+     <span><a href="{comments url}"><svg></svg>{number of comments} comments</a></span>
+    </span>
+   </div>
   </div>
   ```
