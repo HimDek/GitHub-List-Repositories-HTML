@@ -71,7 +71,7 @@ function gitpin(apiurl, type, element) {
     statsspan = document.createElement("span");
 
     url = out.html_url;
-    desc = (out.description != null) ? "" : out.description;
+    desc = (out.description == null) ? "" : out.description;
 
     if (type == "repo") {
 
