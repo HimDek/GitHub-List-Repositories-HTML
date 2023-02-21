@@ -77,10 +77,10 @@ function gitpin(apiurl, type, element) {
       forkspan = document.createElement("span");
       licensespan = document.createElement("span");
       
-      languagespan.classList.add("d-none");
-      starspan.classList.add("d-none");
-      forkspan.classList.add("d-none");
-      licensespan.classList.add("d-none");
+      languagespan.classList.add("d-none stat");
+      starspan.classList.add("d-none stat");
+      forkspan.classList.add("d-none stat");
+      licensespan.classList.add("d-none stat");
       
       if (out.has_pages)
         url = "https://" + out.owner.login + ".github.io/" + out.name;
@@ -162,9 +162,9 @@ function gitpin(apiurl, type, element) {
       forkspan = document.createElement("span");
       commentspan = document.createElement("span");
       
-      filespan.classList.add("d-none");
-      forkspan.classList.add("d-none");
-      commentspan.classList.add("d-none");
+      filespan.classList.add("d-none stat");
+      forkspan.classList.add("d-none stat");
+      commentspan.classList.add("d-none stat");
       
       filecount = 0;
       forkcount = 0;
