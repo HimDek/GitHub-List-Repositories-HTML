@@ -230,6 +230,7 @@ function gitpin(apiurl, type, element) {
             }
 
             card.classList.add("gist");
+          card.appendChild(cardbody)
         }
         
         card.classList.add("box");  // Legacy support
