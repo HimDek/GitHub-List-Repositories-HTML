@@ -224,7 +224,7 @@ function gitpin(apiurl, type, element) {
                 commenta.classList.add("card-link");
                 commenta.setAttribute("href", out.html_url + "#comments");
                 commenta.innerHTML = commentsvg;
-                commenta.appendChild(aspan);
+                commenta.appendChild(span);
                 
                 cardbody.appendChild(commenta);
             }
