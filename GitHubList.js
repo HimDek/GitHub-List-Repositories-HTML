@@ -80,7 +80,7 @@ function gitpin(apiurl, type, element) {
                 
                 cardbody = document.createElement("div")
                 cardbody.classList.add("card-body")
-                cardbody.appendClild(cardtitle)
+                cardbody.appendChild(cardtitle)
                 
                 cardtext = document.createElement("p")
                 cardtext.classList.add("card-text")
@@ -162,7 +162,7 @@ function gitpin(apiurl, type, element) {
                 
                 cardbody = document.createElement("div")
                 cardbody.classList.add("card-body")
-                cardbody.appendClild(cardtitle)
+                cardbody.appendchild(cardtitle)
                 
                 cardtext = document.createElement("p")
                 cardtext.classList.add("card-text")
