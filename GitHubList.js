@@ -181,7 +181,7 @@ function gitpinjson(data, type, element) {
         filea.innerHTML = filesvg;
         filea.appendChild(span);
 
-        cardbody.appendChild(filea);
+        cardstats.appendChild(filea);
       }
 
       if (data.comments != 0) {
