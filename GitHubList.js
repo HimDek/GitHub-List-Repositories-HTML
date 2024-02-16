@@ -164,7 +164,7 @@ function gitpinjson(data, type, element) {
       for (let i = 0; ; i++) {
         if (Object.keys(data.files)[i] != null)
           filecount++;
-        if (Object.keys(data.files)[i] == null && Object.keys(data.forks)[i] == null)
+        else
           break;
       }
 
